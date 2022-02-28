@@ -13,7 +13,7 @@ const customerService = {
     },
     async findByEmail(email) {
         try {
-            const customer = await Customer.findOne(email).select({ __v: 0, pets: 0 });
+            const customer = await Customer.findOne(email).select({ __v: 0, services: 0 });
             return customer;
         } catch (error) {
             throw new ErrorHttp(error, 503);
@@ -82,6 +82,6 @@ const customerService = {
             throw new ErrorHttp(error, 503);
         }
     },
-};
+};  
 
 module.exports = customerService;

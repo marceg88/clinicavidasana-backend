@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 
 const CustomerSchema = new Schema({
     full_name: { type: String, lowercase: true, required: true, maxLength: 150 },
-    roles: { type: String, required: true },
     email: { type: String, required: true, maxLength: 100 },
     password: { type: String, required: true },
     address: { type: String, required: true, maxLength: 120 },

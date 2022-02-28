@@ -8,7 +8,7 @@ const customersRoutes = require('./customers.routes.js');
 // const requestServicesRoutes = require('./requestservice.routes');
 const authRoutes = require('./auth.routes');
 const serviceRoutes = require('./service.routes')
-// // const uploadRoutes = require('./upload.routes');
+const uploadRoutes = require('./upload.routes');
 const paymentRoutes = require('./payment.routes.js');
 
 // app.use('/attendances', attendanceRoutes);
@@ -19,6 +19,6 @@ app.use('/customers', customersRoutes);
 app.use('/auth', authRoutes);
 app.use('/reqservices', serviceRoutes);
 app.use('/payment', paymentRoutes);
-// app.use('/upload', uploadRoutes);
+app.use('/upload', uploadRoutes);
 
 module.exports = app;
