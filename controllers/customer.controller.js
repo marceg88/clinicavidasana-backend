@@ -50,7 +50,7 @@ const signUpCustomer = asyncHandler(async (req, res, next) => {
         template_id: 'd-6a3f00b693624ea7a08b9938014ad508',
         dynamic_template_data: {
           firstName: newUser.full_name,
-          url: `${process.env.URL_VALIDATE_REGISTER}login/${newUser.passwordResetToken}`,
+          url: `${process.env.URL_VALIDATE_REGISTER}/login/${newUser.passwordResetToken}`,
         },
       };
       await sendEmail(messageForEmail);
